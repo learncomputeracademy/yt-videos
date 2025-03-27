@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Youtube Videos Time Table</title>
-  <link
-  rel="icon"
-  type="image/x-icon"
-  href="https://res.cloudinary.com/learncomputeracademy/image/upload/w_80,c_fill,ar_1:1,g_auto,r_max/v1701951354/learncomputer.in/12_plqchp.png"
-/>
-  <link type="text/css" rel="Stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Release Calendar</title>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
-<iframe id="fullPageIframe" 
-    src="https://docs.google.com/document/d/e/2PACX-1vRBGbHoZbLk4ITjM2vidNr2JA5x1cpRLR-BVdg2fO2_YEmDJmZXRgXykRzfosmakTlpRiWDQAARTtxZ/pub?embedded=true">
-</iframe>
-
-<script>
-  document.addEventListener("wheel", function(event) {
-      const iframe = document.getElementById("fullPageIframe");
-      iframe.contentWindow.scrollBy(0, event.deltaY); 
-      event.preventDefault(); // Prevent browser from scrolling
-  }, { passive: false });
-
-</script>
-
-
-<script src="https://cdn.jsdelivr.net/gh/amartadey/robotBlocker@main/robotBlocker.js"></script>
+    <div class="container">
+        <header>
+            <h1>LCA Video Release Calendar</h1>
+        </header>
+        <div class="video-type-legend">
+            <div class="legend-item full-video">
+                <span class="color-box"></span>
+                Full YouTube Video
+            </div>
+            <div class="legend-item reel-video">
+                <span class="color-box"></span>
+                YouTube Reels
+            </div>
+        </div>
+        <div id="calendar"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

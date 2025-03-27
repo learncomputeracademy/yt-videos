@@ -1,0 +1,13 @@
+{
+    "videos": [
+        {"title": "সার্ভার , ক্লায়েন্ট , ব্রাউসার কাকে বলে", "date": "08-02-2025", "link": "https://www.youtube.com/shorts/VQzkI2OoA1o", "type": "reel"},
+        {"title": "Pre React 12 || Objects Methods 2 || রিএক্ট শেখার আগে শিখুন", "date": "10-02-2025", "link": "https://www.youtube.com/watch?v=Xwclz3luM5A", "type": "full"},
+        {"title": "ওয়েবসাইট বানানোর সময় এই ৫ টি ভুল করবেন না", "date": "11-02-2025", "link": "https://www.youtube.com/shorts/HlcFZjSvBSY", "type": "reel"},
+        {"title": "Pre React 13 || Object Seal Freeze || রিএক্ট শেখার আগে শিখুন", "date": "12-02-2025", "link": "https://www.youtube.com/watch?v=HjFuaJ5aGAM", "type": "full"},
+        {"title": "২০২৫ শালে jQuery গুরুত্ব", "date": "13-02-2025", "link": "https://www.youtube.com/shorts/QeWq81CNP-k", "type": "reel"},
+        {"title": "Pre React 14 || Functions || রিএক্ট শেখার আগে শিখুন", "date": "14-02-2025", "link": "https://www.youtube.com/watch?v=jOF9W4D5caw", "type": "full"},
+        {"title": "লাইটমোড  আর ডার্কমোড", "date": "15-02-2025", "link": "https://www.youtube.com/shorts/JneYqfjKnY0", "type": "reel"},
+        {"title": "Functions 2", "date": "17-02-2025", "link": "https://www.youtube.com/watch?v=meFyuBU_DRo", "type": "full"}
+
+    ]
+}
