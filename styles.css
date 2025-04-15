@@ -1,3 +1,4 @@
+/*styles.css file */
 :root {
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
@@ -52,6 +53,111 @@ header p {
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
     overflow: hidden;
+    position: relative;
+    min-height: 400px;
+}
+
+/* Loader styles */
+.loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    border-radius: 12px;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--background-light);
+    border-bottom-color: var(--primary-color);
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+.loader-text {
+    font-size: 14px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error-message {
+    text-align: center;
+    padding: 20px;
+    color: #e74c3c;
+}
+
+.error-message button {
+    margin-top: 10px;
+}
+
+/* YouTube thumbnail tooltip styles */
+.video-thumbnail-tooltip {
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 8px;
+    max-width: 300px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.video-thumbnail-tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.video-thumbnail-tooltip img {
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+}
+
+.video-thumbnail-tooltip .video-title {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-dark);
+}
+
+.video-thumbnail-tooltip .video-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-top: 4px;
+    font-weight: 500;
+    color: white;
+}
+
+.video-thumbnail-tooltip .video-type.full {
+    background-color: var(--full-video-color);
+}
+
+.video-thumbnail-tooltip .video-type.reel {
+    background-color: var(--reel-video-color);
 }
 
 .fc {
@@ -204,6 +310,11 @@ header p {
 
     header h1 {
         font-size: 1.4em;
+    }
+    
+    /* Make tooltip smaller on mobile */
+    .video-thumbnail-tooltip {
+        max-width: 200px;
     }
 }
 
