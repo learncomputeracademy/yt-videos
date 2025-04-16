@@ -13,6 +13,46 @@
         <header>
             <h1>LCA Video Release Calendar</h1>
         </header>
+
+        <!-- Channel Analytics -->
+        <div class="channel-analytics">
+            <h2>Channel Analytics</h2>
+            <div class="analytics-cards">
+                <div class="analytics-card">
+                    <h3>Total Views</h3>
+                    <p id="total-views">Loading...</p>
+                </div>
+                <div class="analytics-card">
+                    <h3>Subscribers</h3>
+                    <p id="subscriber-count">Loading...</p>
+                </div>
+                <div class="analytics-card">
+                    <h3>Total Videos</h3>
+                    <p id="video-count">Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Channel Details -->
+        <div class="channel-details">
+            <h2>Channel Details</h2>
+            <img id="channel-banner" src="" alt="Channel Banner" style="display: none;">
+            <p id="channel-description">Loading...</p>
+            <p id="channel-created">Loading...</p>
+        </div>
+
+        <!-- Video Type Filter -->
+        <div class="video-type-filter">
+            <label>Filter Videos: </label>
+            <select id="video-type-filter">
+                <option value="all">All Videos</option>
+                <option value="full">Full Videos</option>
+                <option value="reel">Reels</option>
+                <option value="scheduled">Scheduled</option>
+            </select>
+        </div>
+
+        <!-- Video Type Legend -->
         <div class="video-type-legend">
             <div class="legend-item full-video">
                 <span class="color-box"></span>
@@ -22,17 +62,30 @@
                 <span class="color-box"></span>
                 YouTube Reels
             </div>
+            <div class="legend-item scheduled-video">
+                <span class="color-box"></span>
+                Scheduled Video
+            </div>
         </div>
+
+        <!-- Calendar -->
         <div id="calendar"></div>
+
+        <!-- Playlist Details -->
+        <div class="playlist-details">
+            <h2>Playlists</h2>
+            <div id="playlist-list">Loading playlists...</div>
+        </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
     <script src="script.js"></script>
     <script>
         window.RobotBlockerConfig = {
-           blockRightClick: false,
-           blockDevTools: false,
-       };
-   </script>
-   <script src="https://cdn.jsdelivr.net/gh/amartadey/robotBlocker@latest/robotBlocker.js"></script>
+            blockRightClick: false,
+            blockDevTools: false,
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/amartadey/robotBlocker@latest/robotBlocker.js"></script>
 </body>
 </html>
