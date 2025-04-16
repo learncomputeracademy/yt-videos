@@ -345,3 +345,159 @@ header p {
 .video-type-legend .reel-video .color-box {
     background-color: var(--reel-video-color);
 }
+
+/* Add these styles to your existing styles.css */
+
+/* Enhanced YouTube thumbnail tooltip styles */
+.video-thumbnail-tooltip {
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    padding: 0;
+    max-width: 400px;
+    width: 350px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-thumbnail-tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.video-thumbnail-tooltip img.video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.video-thumbnail-tooltip .video-details {
+    padding: 12px;
+}
+
+.video-thumbnail-tooltip .video-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.video-thumbnail-tooltip .video-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: white;
+}
+
+.video-thumbnail-tooltip .video-type.full {
+    background-color: var(--full-video-color);
+}
+
+.video-thumbnail-tooltip .video-type.reel {
+    background-color: var(--reel-video-color);
+}
+
+.video-thumbnail-tooltip .video-metadata {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.video-thumbnail-tooltip .metadata-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #555;
+}
+
+.video-thumbnail-tooltip .metadata-item svg {
+    color: #777;
+    flex-shrink: 0;
+}
+
+.video-thumbnail-tooltip .video-description {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #555;
+    background-color: rgba(0,0,0,0.02);
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    max-height: 70px;
+    overflow-y: auto;
+}
+
+.video-thumbnail-tooltip .tooltip-footer {
+    padding: 10px 12px;
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.watch-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #ff0000;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.watch-button:hover {
+    background-color: #cc0000;
+    transform: translateY(-1px);
+}
+
+/* Loading state */
+.video-thumbnail-tooltip .metadata-loader {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0,0,0,0.1);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+.video-thumbnail-tooltip .metadata-text {
+    font-size: 12px;
+    color: #777;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .video-thumbnail-tooltip {
+        max-width: 280px;
+        width: 280px;
+    }
+    
+    .video-thumbnail-tooltip .video-metadata {
+        grid-template-columns: 1fr;
+    }
+}
