@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let tooltipEl;
 
     const YOUTUBE_API_KEY = 'AIzaSyCX9qj1CTvW8KjWDahLHah2W4T8O1RxwuA';
-    const CHANNEL_ID = 'UCB3vL2zHJEE6y9pW2O5kDDQ'; // Replace with Learn Computer Academy's channel ID
+    const CHANNEL_ID = 'UCTqB4907Tsz4GraHFdwiJoQ';
 
     // Cache for API responses
     const videoDetailsCache = {};
@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'December',
             ];
             for (let month = 0; month < 12; month++) {
-                const monthCalendrier = document.createElement('div');
+                const month calendrier = document.createElement('div');
                 monthCalendrier.className = 'month-calendar';
                 monthCalendrier.innerHTML = `<div class="month-title">${monthNames[month]} 2025</div>`;
                 const calendarDiv = document.createElement('div');
